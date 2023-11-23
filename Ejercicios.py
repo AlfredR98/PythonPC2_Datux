@@ -1,4 +1,4 @@
-######Estructuras Iterativas:
+###### Estructuras Iterativas:
 '''
 Problema 1
 '''
@@ -41,7 +41,47 @@ print('Cantidad de números impares: ',len(impares))
 '''
 Problema 4
 '''
+alum_notas = {}
+lnotas = []
+z = 1
 
+registros = int(input('Ingrese la cantidad de alumnos que va a registrar: '))
+
+while z <= registros:
+    nombre = input(f'Ingrese el nombre del alumno {z}: ')
+    alum_notas[f'Alumno{z}'] = nombre
+
+    for i in range(3):
+      notas = int(input(f'Ingrese la nota {i+1}: '))
+      lnotas.append(notas)
+
+    alum_notas[f'Notas{z}'] = lnotas
+    z+=1
+
+print(alum_notas)
+###### Funciones:
+'''
+Problema 5
+'''
+def contar_digito(numero,digito):
+    dig = numero.count(digito)
+    return dig
+
+numero = input('Ingrese número: ')
+
+while True:
+  digito = input('Ingrese el dígito para saber cuantas veces se repite: ')
+  if len(digito) == 1:
+     contar = contar_digito(numero,digito)
+     print('El número ingresado es:\t ',numero)
+     print(f'El dígito {digito} se repite en el número: {contar} veces')
+     break
+  else:
+     print('!! Debe ingresar solo 1 dígito !!\n')
+  continue
+'''
+Problema 6
+'''
 
 
 
