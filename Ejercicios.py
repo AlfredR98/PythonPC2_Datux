@@ -82,8 +82,67 @@ while True:
 '''
 Problema 6
 '''
+def fibonacci(num):
+    valores = [0, 1]
+    while valores[-1] + valores[-2] <= num:
+        valores.append(valores[-1] + valores[-2])
+    return valores
 
+secuencia_fibonacci = fibonacci(50)
 
+print("Serie Fibonacci :")
+print(secuencia_fibonacci)
+'''
+Problema 7
+'''
+def validar_primo(num):   
+    primo = True
+    for i in range(2, num):
+        if num % i == 0:
+            # encontre un divisor
+            primo = False
+            break
+    return primo
 
+num_primo = int(input('Ingrese número a evaluar: '))
+
+if validar_primo(num_primo):
+    print(f'El número {num_primo} es primo' )
+else:
+    print(f'El número {num_primo} no es primo')
+
+'''
+Problema 8
+'''
+def calculo_factorial(num):
+    fac = 1
+    for i in range(num):
+        fac *=(i+1)
+    return fac
+
+while True:
+    numero = int(input('Ingrese el número a calcular: '))
+    if numero <= 0:
+            print('Ingrese número mayor a 0')
+            continue
+    else:
+        factorial = calculo_factorial(numero)  
+        print(f"El factorial de {numero} es:  {factorial}")
+        break
+'''
+Problema 9
+'''
+def quitar_vocales(texto):
+    vocales = "aeiouAEIOU"
+    textoNoVocales = ''.join([char for char in texto if char not in vocales])
+    return textoNoVocales
+
+mensaje = input("Ingrese el texto:\n")
+
+r = quitar_vocales(mensaje)
+print("Resultado:", r)
+'''
+Problema 10
+'''
 
 

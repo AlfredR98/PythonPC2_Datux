@@ -1,11 +1,16 @@
 
-inicio = 0
-fin = 50
-num = 0
-def serie_fibonacci(inicio,fin):
-    for i in range(inicio,fin):
-        print(i)
+mes = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio",
+"Agosto","Septiembre","Octubre","Noviembre","Diciembre"
+]
+
+fecha = input('Ingrese la fecha "d/m/aaaa" o en texto "Mes dia, Año":\n')
+
+fecha_mes = fecha.split()
 
 
-secuencia = serie_fibonacci(inicio,fin)
-print(secuencia)
+
+print(fecha_mes)
+
+
+
+
