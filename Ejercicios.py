@@ -144,5 +144,25 @@ print("Resultado:", r)
 '''
 Problema 10
 '''
+def obtener_mes(mes):
+    meses = [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    ]
+    return meses.index(mes) + 1
 
+def convertir_fecha(fecha):
+    mes_fecha = fecha.split()
 
+    if '/' in fecha:
+        mes, dia, anio = map(int, mes_fecha[0].split('/'))
+    else:
+        mes = obtener_mes(mes_fecha[0])
+        dia, anio = map(int, mes_fecha[1].split(','))
+
+    nueva_fecha = f"{anio:04d}-{mes:02d}-{dia:02d}"
+    return nueva_fecha
+
+fecha_ingresada = input("Ingrese la fecha en formato d/m/aaaa o texto):\n")
+nueva_fecha = convertir_fecha(fecha_ingresada)
+print("Nueva fecha:", nueva_fecha)
